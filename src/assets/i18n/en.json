@@ -13,5 +13,9 @@
         "title": "Language",
         "spanish": "Spanish",
         "english": "English"
+     },
+     "BUTTONS": {
+        "accept": "Accept",
+        "cancel": "Cancel"
      }
 }

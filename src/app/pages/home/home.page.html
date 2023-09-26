@@ -3,9 +3,51 @@
     <ion-title class="ion-margin-top">
       <img src="assets/images/isologo.png" alt="">
     </ion-title>
+
+    <ion-item mode="ios" lines="none" slot="end" class="item-lang">
+      <ion-select [(ngModel)]="selectedLanguage" (ionChange)="setLanguage()" toggleIcon="globe" interface="popover">
+        <ion-select-option value="es">{{'LANG.spanish' | translate}}</ion-select-option>
+        <ion-select-option value="en">{{'LANG.english' | translate}}</ion-select-option>
+      </ion-select>
+    </ion-item>
+
   </ion-toolbar>
 </ion-header>
 <div class="shapedividers_com-7032"></div>
 <ion-content>
+
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col size="12" class="d-flex-center">
+
+        <div class="filters animate__animated animate__fadeInDown">
+          <ion-item lines="none" class="custom-input">
+            <ion-icon slot="start" name="search" color="primary"></ion-icon>
+            <ion-input type="number" labelPlacement="floating"
+              [label]="'HOME.search_episode_by_number' | translate"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-icon class="select-icon" slot="start" src="assets/images/isotipo.svg"></ion-icon>
+            <ion-select 
+            [okText]="'BUTTONS.accept' | translate"
+            [cancelText]="'BUTTONS.cancel' | translate" 
+            class="ios" 
+            labelPlacement="stacked" 
+            [label]="'HOME.season' | translate"
+            [(ngModel)] = "selectedSeason"
+            >
+              <ion-select-option *ngFor="let s of seasons" [value]="s.id">{{s.title}}</ion-select-option>
+             
+            </ion-select>
+          </ion-item>
+
+        </div>
+
+
+      </ion-col>
+      <ion-col size="6"></ion-col>
+    </ion-row>
+  </ion-grid>
 
 </ion-content>

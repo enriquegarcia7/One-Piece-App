@@ -1,0 +1,7 @@
+{
+  "name": "one-piece-app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

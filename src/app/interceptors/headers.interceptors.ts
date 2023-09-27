@@ -17,7 +17,7 @@ export class HeadersInterceptor implements HttpInterceptor {
       headers: req.headers
       .append('X-RapidAPI-Key', 'f5e9cd75e5msh40ea0131d60a63ap1899a7jsn587a7b848cec')
       .append('X-RapidAPI-Host', 'one-piece-episodes.p.rapidapi.com'),
-      params: req.params.append('languages', language)
+      params: req.params.append('language', language)
     });
 
     // send cloned request with header to the next handler.

@@ -3,5 +3,9 @@ export const environment = {
 
   baseUrl: 'https://one-piece-episodes.p.rapidapi.com/one_piece/',
 
-  seasons: 'seasons/'
+  seasons: 'seasons/',
+  
+  episodes_by_season:'episodes_by_season/',
+
+  episode: 'episode/'
 };

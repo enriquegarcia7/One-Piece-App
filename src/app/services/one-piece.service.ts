@@ -10,6 +10,16 @@ export class OnePieceService {
 
   //----obtener temporadas---
   getSeasons() {
-    return this.http.get(environment.baseUrl + environment.seasons);
+    return this.http.get(environment.baseUrl + environment.seasons)
+  }
+
+    //----obtener episodios temporadas---
+    getEpisodesBySeason(id: string) {
+      return this.http.get(environment.baseUrl + environment.episodes_by_season + id)
+    }
+
+      //----obtener episodios por numero---
+  getEpisodesByNumber(number: string) {
+    return this.http.get(environment.baseUrl + environment.episode + number)
   }
 }

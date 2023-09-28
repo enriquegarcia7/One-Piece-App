@@ -64,10 +64,11 @@
             <p class="space-between">
               {{'HOME.episode' | translate}}: {{e.episode}}
 
-              <a [href]="e.url" target="_blank" rel="noopener noreferrer"></a>
-              <ion-button color="light" mode="md" class="ion-no-padding play-btn" shape="round">
-                <ion-icon  name="play" color="primary"></ion-icon>
-              </ion-button>
+              <a [href]="e.url" target="_blank" rel="noopener noreferrer">
+                <ion-button color="light" mode="md" class="ion-no-padding play-btn" shape="round">
+                  <ion-icon  name="play" color="primary"></ion-icon>
+                </ion-button>
+              </a>
             </p>
             <div class="title">{{e.title}}</div>
             <p>{{e.description | slice:0:100}}...</p>

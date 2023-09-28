@@ -15,7 +15,7 @@ export class HeadersInterceptor implements HttpInterceptor {
     // cloned headers, updated with the authorization.
     const authReq = req.clone({
       headers: req.headers
-      .append('X-RapidAPI-Key', 'f5e9cd75e5msh40ea0131d60a63ap1899a7jsn587a7b848cec')
+      .append('X-RapidAPI-Key', '957ce914ccmsh842568736aad1f6p18a1eejsn6fd93770c3a4')
       .append('X-RapidAPI-Host', 'one-piece-episodes.p.rapidapi.com'),
       params: req.params.append('language', language)
     });
